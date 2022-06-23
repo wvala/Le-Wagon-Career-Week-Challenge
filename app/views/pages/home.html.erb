@@ -1,2 +1,16 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div data-controller="museum">
+  <div class="text-container">
+    <div class="form-holder">
+      <form data-action="submit->museum#search">
+        <input type="string" class="form-control" placeholder="Latitude" data-museum-target="lat">
+        <input type="string" class="form-control" placeholder="Longitude" data-museum-target="lng">
+        <input type="submit" value="Find Museums" class="btn btn-success">
+      </form>
+      <div>
+        <ul data-museum-target="result">
+          <%# Museums go here %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
